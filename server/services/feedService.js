@@ -1,3 +1,4 @@
+var r = require('../repositories/feedRepository.js');
 var s = {};
 s.getFeeds = function(callback) {
   var OpmlParser = require('opmlparser');
@@ -19,6 +20,7 @@ s.getFeeds = function(callback) {
     while (outline = stream.read()) {
       outlines.push(outline);
       console.log(outline);
+      r.add();
     }
     if (callback) {
       callback(outlines);
@@ -32,5 +34,8 @@ s.getFeeds = function(callback) {
     }
     stream.pipe(opmlparser);
   });
+};
+s.addFeeds = function() {
+
 }
 module.exports = s;
