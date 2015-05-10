@@ -3,6 +3,7 @@ var router = express.Router();
 var service = require('../services/feedService');
 /* GET users listing. */
 router.get('/import', function(req, res, next) {
+  console.log(req);
   service.getFeeds(function(data) {
     var repo = require('../repositories/feedRepository');
     repo.add(data);
