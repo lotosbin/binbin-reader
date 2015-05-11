@@ -1,6 +1,9 @@
 ﻿using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Xml;
 using MongoRepository;
 using Nancy;
+using Nancy.ModelBinding;
 
 namespace WebApplication1 {
     public class FeedModule : NancyModule {
@@ -13,9 +16,8 @@ namespace WebApplication1 {
             };
             Post["/"] = p => {
                 //add feed url
-                var f = new Feed() {
-                    Url = p.url
-                };
+                var f = this.Bind<Feed>();
+                f.Title = GetFeedItems(f.Url).Title.Text;
                 var feeds = new MongoRepository<Feed>();
                 feeds.Add(f);
                 return "";
@@ -28,6 +30,33 @@ namespace WebApplication1 {
                 feeds.Add(f);
                 return "";
             };
+            Get["{id}/detail"] = p => {
+                var feed = new MongoRepository<Feed>().GetById(p.id);
+                if (feed != null)
+                    return GetFeedItems(feed.Url);
+                return "";
+            };
+        }
+
+        private SyndicationFeed GetFeedItems(string url) {
+            using (var r = XmlReader.Create(url)) {
+                return SyndicationFeed.Load(r);
+                //foreach (SyndicationItem album in albums.Items) {
+
+                // album.links[0].URI points to this album page on spaces.live.com
+                // album.Summary (not shown) is an HTML block with thumbnails of the album pics
+                //cell.Text = string.Format("<a href='{0}'>{1}</a>", album.Links[0].Uri, album.Title.Text);
+                //albumRSS = GetAlbumRSS(album);
+                //var r = XmlReader.Create(albumRSS);
+                //photos = SyndicationFeed.Load(r);
+                //r.Close();
+                //foreach (SyndicationItem photo in photos.Items) {
+                // photo.Summary is an HTML block with a thumbnail of the pic
+                //cell.Text = string.Format("{0}", photo.Summary.Text);
+                //}
+
+                //}
+            }
         }
     }
 }

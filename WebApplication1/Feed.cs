@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ServiceModel.Syndication;
 using MongoRepository;
 
 namespace WebApplication1
@@ -16,5 +17,6 @@ namespace WebApplication1
         public DateTime AddTime { get; set; }
 
         public string Url { get; set; }
+        public string Title { get; set; }
     }
 }
