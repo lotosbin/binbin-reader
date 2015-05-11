@@ -1,4 +1,5 @@
-﻿using MongoRepository;
+﻿using System.Linq;
+using MongoRepository;
 using Nancy;
 
 namespace WebApplication1 {
@@ -6,7 +7,19 @@ namespace WebApplication1 {
 
         public FeedModule()
             : base("feeds") {
-            Get["/"] = parameters => "Hello World";
+            Get["/"] = p => {
+                var list = new MongoRepository<Feed>().ToList();
+                return list;
+            };
+            Post["/"] = p => {
+                //add feed url
+                var f = new Feed() {
+                    Url = p.url
+                };
+                var feeds = new MongoRepository<Feed>();
+                feeds.Add(f);
+                return "";
+            };
             Get["import"] = p => {
                 var f = new Feed() {
                     Url = "http://mapei.blog.51cto.com/rss.php?uid=356827"
@@ -16,8 +29,5 @@ namespace WebApplication1 {
                 return "";
             };
         }
-    }
-    public class Feed : Entity {
-        public string Url { get; set; }
     }
 }
