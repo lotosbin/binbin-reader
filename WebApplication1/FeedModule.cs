@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Xml;
 using MongoRepository;
@@ -17,9 +18,12 @@ namespace WebApplication1 {
             Post["/"] = p => {
                 //add feed url
                 var f = this.Bind<Feed>();
-                f.Title = GetFeedItems(f.Url).Title.Text;
+                var feed = GetFeedItems(f.Url);
+                f.Title = feed.Title.Text;
+                f.LastUpdatedTime = feed.LastUpdatedTime.DateTime;
                 var feeds = new MongoRepository<Feed>();
                 feeds.Add(f);
+                UpdateArticle(f);
                 return "";
             };
             Get["import"] = p => {
@@ -32,10 +36,33 @@ namespace WebApplication1 {
             };
             Get["{id}/detail"] = p => {
                 var feed = new MongoRepository<Feed>().GetById(p.id);
+                List<Article> list = new List<Article>();
+                if (feed != null) {
+                    var articals = new MongoRepository<Article>();
+                    string id = feed.Id.ToString();
+                    list = articals.Where(a => a.SourceId == id).ToList();
+                    return list;
+                }
+                return list;
+            };
+            Post["{id}/detail"] = p => {
+                var feed = new MongoRepository<Feed>().GetById(p.id);
                 if (feed != null)
-                    return GetFeedItems(feed.Url);
+                    UpdateArticle(feed);
                 return "";
             };
+        }
+
+        private void UpdateArticle(Feed f) {
+            var feed = GetFeedItems(f.Url);
+            var articles = new MongoRepository<Article>();
+            foreach (var item in feed.Items) {
+                var artical = articles.SingleOrDefault(a => a.ThirdId == item.Id);
+                if (artical != null && artical.LastUpdatedTime >= item.LastUpdatedTime.DateTime) continue;
+                var article = new Article(f.Id, item.Id, item.Title.Text, item.PublishDate.DateTime);
+                article.Content = item.Content.ToString();
+                articles.Add(article);
+            }
         }
 
         private SyndicationFeed GetFeedItems(string url) {
