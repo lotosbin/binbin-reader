@@ -7,3 +7,4 @@ server/npm-debug.log
 WebApplication1/packages/
 WebApplication1/bin/
 WebApplication1/obj/
+*.suo
