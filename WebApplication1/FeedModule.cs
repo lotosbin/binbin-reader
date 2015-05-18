@@ -7,6 +7,12 @@ using Nancy;
 using Nancy.ModelBinding;
 
 namespace WebApplication1 {
+    public class ArticleModule : NancyModule {
+        public ArticleModule()
+            : base("articles") {
+
+        }
+    }
     public class FeedModule : NancyModule {
 
         public FeedModule()
