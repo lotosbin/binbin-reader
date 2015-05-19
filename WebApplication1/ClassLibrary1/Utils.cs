@@ -18,5 +18,10 @@ namespace ClassLibrary1 {
             var readRate = 1000.0f;
             return ChineseLetterCount(text) / readRate;
         }
+
+        public static int Aging(string text) {
+            List<SplitWordResultItem> items = new SplitWordScws().Execute(text);
+            return items.Count(w => w.word_tag == "t" || w.word_tag == "Tg");
+        }
     }
 }
