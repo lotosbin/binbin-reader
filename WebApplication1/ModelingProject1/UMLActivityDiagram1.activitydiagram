@@ -96,6 +96,10 @@
                 <opaqueActionMoniker Id="0f0fe9bd-b0a5-4682-ac7f-53f0d9ecdcf6" LastKnownName="垃圾文章过滤" />
                 <elementDefinition Id="949a4084-ce1a-48d7-9da8-3276b6340138" />
               </controlFlow>
+              <controlFlow Id="e1dc8c8f-4433-4038-ac74-cd679f67e2de" isLeaf="false">
+                <opaqueActionMoniker Id="b14280d6-be8c-4030-9d2b-c9564abdcb55" LastKnownName="时效性" />
+                <elementDefinition Id="75a08109-da31-4c65-9b04-45a2e6ad6407" />
+              </controlFlow>
             </flowNodeTargets>
           </forkNode>
           <opaqueAction Id="1c0a7478-fc9c-4e54-beba-4e76e0a223c2" name="Tag推荐" isLeaf="false">
@@ -145,10 +149,6 @@
               <controlFlow Id="6515ef2f-1cdc-4307-b524-2ee28d2c2887" isLeaf="false">
                 <opaqueActionMoniker Id="7dcbe617-56bc-4a78-bde7-d9357df73f1f" LastKnownName="专业程度计算" />
                 <elementDefinition Id="0252ee1d-c18f-49e2-83a9-9ba3cbc24cf9" />
-              </controlFlow>
-              <controlFlow Id="e1dc8c8f-4433-4038-ac74-cd679f67e2de" isLeaf="false">
-                <opaqueActionMoniker Id="b14280d6-be8c-4030-9d2b-c9564abdcb55" LastKnownName="时效性" />
-                <elementDefinition Id="75a08109-da31-4c65-9b04-45a2e6ad6407" />
               </controlFlow>
               <controlFlow Id="63c00810-385c-45ec-9875-ca9cc0c1d1a1" isLeaf="false">
                 <opaqueActionMoniker Id="f5b308b7-51b2-4e48-8caa-965645143dcc" LastKnownName="词数统计" />

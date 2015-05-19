@@ -10,5 +10,10 @@ namespace ClassLibrary1 {
             byte[] byts = Encoding.GetEncoding("gb2312").GetBytes(strText);
             return byts.Length - strText.Length;
         }
+
+        public static float ReadTime(string text) {
+            var readRate = 1000.0f;
+            return ChineseLetterCount(text) / readRate;
+        }
     }
 }

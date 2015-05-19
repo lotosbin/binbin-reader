@@ -593,6 +593,14 @@
                   LastKnownName="垃圾文章过滤"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
+              <controlFlow
+                Id="75a08109-da31-4c65-9b04-45a2e6ad6407"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="871715b5-dd4a-42e4-a578-42b211d44b02"
+                  LastKnownName="时效性"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
             </flowNodeTargets>
           </forkNode>
           <opaqueAction
@@ -672,14 +680,6 @@
                 <opaqueActionMoniker
                   Id="929c8cff-796b-4061-a602-be83c4e51c2d"
                   LastKnownName="专业程度计算"
-                  LastKnownLocation="ModelingProject1.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="75a08109-da31-4c65-9b04-45a2e6ad6407"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="871715b5-dd4a-42e4-a578-42b211d44b02"
-                  LastKnownName="时效性"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
               <controlFlow
