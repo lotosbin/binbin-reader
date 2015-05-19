@@ -7,12 +7,6 @@ using Nancy;
 using Nancy.ModelBinding;
 
 namespace WebApplication1 {
-    public class ArticleModule : NancyModule {
-        public ArticleModule()
-            : base("articles") {
-
-        }
-    }
     public class FeedModule : NancyModule {
 
         public FeedModule()
@@ -65,8 +59,9 @@ namespace WebApplication1 {
             foreach (var item in feed.Items) {
                 var artical = articles.SingleOrDefault(a => a.ThirdId == item.Id);
                 if (artical != null && artical.LastUpdatedTime >= item.LastUpdatedTime.DateTime) continue;
-                var article = new Article(f.Id, item.Id, item.Title.Text, item.PublishDate.DateTime);
-                article.Content = item.Content.ToString();
+                var article = new Article(f.Id, item.Id, item.Title.Text, item.PublishDate.DateTime) {
+                    Content = item.Content.ToString()
+                };
                 articles.Add(article);
             }
         }

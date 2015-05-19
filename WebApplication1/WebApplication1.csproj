@@ -93,8 +93,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Article.cs" />
-    <Compile Include="Feed.cs" />
+    <Compile Include="CustomBootstrapper.cs" />
+    <Compile Include="Entities\Article.cs" />
+    <Compile Include="ArticleModule.cs" />
+    <Compile Include="Entities\Feed.cs" />
     <Compile Include="FeedModule.cs" />
     <Compile Include="HelloModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
