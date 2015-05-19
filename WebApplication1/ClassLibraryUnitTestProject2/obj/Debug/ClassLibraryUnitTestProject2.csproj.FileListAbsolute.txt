@@ -1,0 +1,7 @@
+C:\Users\liubinbin\Documents\binbin-reader\WebApplication1\ClassLibraryUnitTestProject2\bin\Debug\ClassLibraryUnitTestProject2.dll
+C:\Users\liubinbin\Documents\binbin-reader\WebApplication1\ClassLibraryUnitTestProject2\bin\Debug\ClassLibraryUnitTestProject2.pdb
+C:\Users\liubinbin\Documents\binbin-reader\WebApplication1\ClassLibraryUnitTestProject2\bin\Debug\ClassLibrary1.dll
+C:\Users\liubinbin\Documents\binbin-reader\WebApplication1\ClassLibraryUnitTestProject2\bin\Debug\ClassLibrary1.pdb
+C:\Users\liubinbin\Documents\binbin-reader\WebApplication1\ClassLibraryUnitTestProject2\obj\Debug\ClassLibraryUnitTestProject2.csprojResolveAssemblyReference.cache
+C:\Users\liubinbin\Documents\binbin-reader\WebApplication1\ClassLibraryUnitTestProject2\obj\Debug\ClassLibraryUnitTestProject2.dll
+C:\Users\liubinbin\Documents\binbin-reader\WebApplication1\ClassLibraryUnitTestProject2\obj\Debug\ClassLibraryUnitTestProject2.pdb

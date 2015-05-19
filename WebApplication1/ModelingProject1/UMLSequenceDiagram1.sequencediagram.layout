@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLSequenceDiagram1">
+  <SequenceDesignerModelMoniker Id="b0938b30-47c3-4727-beb5-15e98c77b8d1" />
+  <nestedChildShapes>
+    <lifelineShape Id="ba2f3494-b7cb-4259-8451-533a47382aac" absoluteBounds="2.8229167461395264, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="525fde08-85c4-45b9-a5dd-e827f3bea06e" LastKnownName="抓取" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="65f44d47-a6ae-4586-afff-dee501521f51" absoluteBounds="2.3979167461395265, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="525fde08-85c4-45b9-a5dd-e827f3bea06e" LastKnownName="抓取" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="4a7092af-f586-407f-a84d-bedd22754e14" absoluteBounds="2.8229167461395264, 1, 0, 7">
+          <lifelineMoniker Id="525fde08-85c4-45b9-a5dd-e827f3bea06e" LastKnownName="抓取" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+    <lifelineShape Id="b99577e2-af03-49f8-a024-84d538c5e14a" absoluteBounds="4.75, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="3d6d98c6-8b11-4cbf-ab2b-cdb3e95cdf5e" LastKnownName="Lifeline1" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="bbec7d39-bdcc-4a3f-8549-a890f5903bde" absoluteBounds="4.325, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="3d6d98c6-8b11-4cbf-ab2b-cdb3e95cdf5e" LastKnownName="Lifeline1" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="553833c7-cd72-434d-afb7-3b1e92124531" absoluteBounds="4.75, 1, 0, 7">
+          <lifelineMoniker Id="3d6d98c6-8b11-4cbf-ab2b-cdb3e95cdf5e" LastKnownName="Lifeline1" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+  </nestedChildShapes>
+</sequenceDesignerDiagram>

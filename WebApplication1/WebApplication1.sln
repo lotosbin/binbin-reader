@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D0CDCA
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{4B5CB308-C258-45F1-9C36-C686269DE4B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryUnitTestProject2", "ClassLibraryUnitTestProject2\ClassLibraryUnitTestProject2.csproj", "{46F4385F-B86C-4709-8E23-0CDAC875499E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +38,14 @@ Global
 		{86E6C60A-ADEA-4FF2-A48F-CFA1DB2F8F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86E6C60A-ADEA-4FF2-A48F-CFA1DB2F8F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86E6C60A-ADEA-4FF2-A48F-CFA1DB2F8F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B5CB308-C258-45F1-9C36-C686269DE4B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5CB308-C258-45F1-9C36-C686269DE4B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5CB308-C258-45F1-9C36-C686269DE4B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5CB308-C258-45F1-9C36-C686269DE4B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F4385F-B86C-4709-8E23-0CDAC875499E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F4385F-B86C-4709-8E23-0CDAC875499E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F4385F-B86C-4709-8E23-0CDAC875499E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F4385F-B86C-4709-8E23-0CDAC875499E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
