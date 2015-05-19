@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SplitWord.cs" />
+    <Compile Include="SplitWordScws.cs" />
     <Compile Include="SplitWordSina.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

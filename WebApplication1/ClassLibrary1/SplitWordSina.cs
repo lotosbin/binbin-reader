@@ -2,18 +2,12 @@
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace ClassLibrary1
-{
+namespace ClassLibrary1 {
     public class SplitWordSina : SplitWord {
-        public override void Execute(string text) {
-            SplitWord(text);
+        public override List<SplitWordResultItem> Execute(string text) {
+            return SplitWord(text);
         }
 
-        public class SplitWordResultItem {
-            public int index { get; set; }
-            public string word { get; set; }
-            public int word_tag { get; set; }
-        }
 
         public static List<SplitWordResultItem> SplitWord(string text) {
             //http://sae.sina.com.cn/doc/python/segment.html
