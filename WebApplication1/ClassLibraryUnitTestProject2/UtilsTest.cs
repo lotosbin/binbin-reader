@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Xml;
 using ClassLibrary1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
@@ -34,5 +37,36 @@ namespace ClassLibraryUnitTestProject2 {
             Debug.WriteLine(aging);
         }
 
+        [TestMethod]
+        public void Test() {
+            var feed = GetFeedItems("http://36kr.com/feed");
+            Debug.WriteLine(JsonConvert.SerializeObject(feed));
+            Debug.WriteLine("-----------------------------------");
+            var list = new List<dynamic>();
+            foreach (var item in feed.Items) {
+                string content = "";
+                if (item.Summary != null) {
+                    content = item.Summary.Text;
+                }
+                if (item.Content != null) {
+                    content = item.Content.ToString();
+                }
+                var readTime = Utils.ReadTime(content);
+                var aging = Utils.Aging(content);
+                list.Add(new { item, content, readTime, aging });
+            }
+            foreach (dynamic r in list.OrderBy(e => e.readTime).ThenByDescending(e => e.aging)) {
+                Debug.WriteLine("===================");
+                Debug.WriteLine((string)r.content);
+                Debug.WriteLine((float)r.readTime);
+                Debug.WriteLine((int)r.aging);
+            }
+        }
+
+        private SyndicationFeed GetFeedItems(string url) {
+            using (var r = XmlReader.Create(url)) {
+                return SyndicationFeed.Load(r);
+            }
+        }
     }
 }
