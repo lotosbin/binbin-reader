@@ -9,10 +9,12 @@ using WebApplication1.Services;
 
 namespace WebApplication1 {
     public class FeedModule : NancyModule {
-        private ArticleService articleService { get; set; }
+        public ArticleService articleService { get; set; }
+        private FeedService feedService { get; set; }
         public FeedModule()
             : base("feeds") {
             articleService = new ArticleService();
+            feedService = new FeedService();
             Get["/"] = p => {
                 var list = new MongoRepository<Feed>().ToList();
                 return list;
@@ -20,12 +22,8 @@ namespace WebApplication1 {
             Post["/"] = p => {
                 //add feed url
                 var f = this.Bind<Feed>();
-                var feed = articleService.GetFeedItems(f.Url);
-                f.Title = feed.Title.Text;
-                f.LastUpdatedTime = feed.LastUpdatedTime.DateTime;
-                var feeds = new MongoRepository<Feed>();
-                feeds.Add(f);
-                                 articleService.UpdateArticle(f);
+                var newFeed = feedService.AddFeed(f.Url);
+                articleService.UpdateArticle(newFeed);
                 return "";
             };
             Get["import"] = p => {

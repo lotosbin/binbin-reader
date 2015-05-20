@@ -70,6 +70,8 @@
   <ItemGroup>
     <Compile Include="ArticleModuleTest.cs" />
     <Compile Include="Bootstrap.cs" />
+    <Compile Include="FeedModuleTest.cs" />
+    <Compile Include="Services\FeedServcieTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

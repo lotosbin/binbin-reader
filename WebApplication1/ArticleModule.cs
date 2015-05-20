@@ -7,7 +7,7 @@ namespace WebApplication1 {
         public ArticleModule()
             : base("articles") {
             Get["/"] = p => {
-                return new MongoRepository<Article>().ToList();
+                return new MongoRepository<Article>().Take(100).ToList();
             };
             Post["/"] = p => {
                 return "";
