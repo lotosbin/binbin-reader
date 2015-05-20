@@ -11,6 +11,7 @@ namespace WebApplication1 {
         private Timer _timer;
 
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines) {
+            Nancy.Json.JsonSettings.MaxJsonLength = int.MaxValue;
             // your customization goes here
             _timer = new Timer();
             _timer.Interval = 60 * 1000;

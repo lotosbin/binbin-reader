@@ -9,6 +9,7 @@ namespace UnitTestProject1 {
 
         [AssemblyInitialize]
         public static void Setup(TestContext context) {
+            Nancy.Json.JsonSettings.MaxJsonLength = int.MaxValue;
             //note brower 全局只有一个实例,否则会多次执行application start up
             var bootstrapper = new CustomBootstrapper();
             Browser = new Browser(bootstrapper, to => {
