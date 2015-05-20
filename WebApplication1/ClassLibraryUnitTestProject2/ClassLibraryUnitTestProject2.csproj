@@ -60,6 +60,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="SplitWordScwsTest.cs" />
+    <Compile Include="SplitWordSinaTest.cs" />
     <Compile Include="UtilsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -18,6 +19,7 @@ namespace ClassLibrary1 {
             request.AddParameter("content", text, ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
             var content = response.Content; // raw content as string
+            Debug.WriteLine(content);
             return JsonConvert.DeserializeObject<List<SplitWordResultItem>>(content);
             //var response = client.Post<List<SplitWordResultItem>>(request);
             //Debug.WriteLine(JsonConvert.SerializeObject(response));

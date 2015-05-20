@@ -27,11 +27,6 @@ namespace ClassLibraryUnitTestProject2 {
         }
 
         [TestMethod]
-        public void SplitWordTest() {
-            var items = SplitWordSina.SplitWord(_text);
-            Debug.WriteLine(JsonConvert.SerializeObject(items));
-        }
-        [TestMethod]
         public void AgingTest() {
             var aging = Utils.Aging(_text);
             Debug.WriteLine(aging);
