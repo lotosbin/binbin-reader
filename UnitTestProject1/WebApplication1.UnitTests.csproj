@@ -68,6 +68,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AccountModuleTest.cs" />
     <Compile Include="ArticleModuleTest.cs" />
     <Compile Include="Bootstrap.cs" />
     <Compile Include="FeedModuleTest.cs" />
