@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="74b39e11-1c97-4d43-bda5-49800cd53533" name="UMLClassDiagram1" linkedPackageId="1dbf6a6f-6edd-4f74-b2f5-6acf6ec4d049" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8f191861-b2bc-456e-b822-2f626620f450">
+      <profileInstance Id="93432144-8955-4e5b-9b2e-9acdde6c4576" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="17d63972-5dbb-4fe2-a7c9-a5f055f8b34e">
+      <profileInstance Id="fa76110e-5080-4fab-bfd5-6edeac550962" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="839a25da-2313-4fd0-88b7-e0cd67ad84d1" name="ArticleCommit" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3f76906c-0975-4f2d-b007-c2208d3ee3a9" />
+        <targetEnds>
+          <association Id="38ae0494-a423-46f8-b4d7-5eb7776f3bf7" isDerived="false" sourceEndRoleName="ArticleCommit" targetEndRoleName="WordVector" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0495f798-3a17-4dfc-8706-29e0cb385598" LastKnownName="WordVector" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a8ba067-8950-4bb9-89dc-fe350b4a4c67" name="ArticleCommit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="29780d79-d46b-4b91-a0fe-a3e4ca3c6a15" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="35985bd3-5797-46cc-a037-356487b12255" name="WordVector" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="36d992ae-8599-4192-aa9e-d0869caa3ead" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a8faaf4b-2ede-461b-bf74-1749dd10b1ba" />
+          </association>
+          <association Id="598f23b9-449c-426e-b56e-ea18e55d258c" isDerived="false" sourceEndRoleName="ArticleCommit" targetEndRoleName="分词结果" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6fd18d8f-c084-4c8c-afd6-67480af0af3e" LastKnownName="分词结果" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0ee7de43-1468-4bfc-88da-0f7ca9aa4131" name="ArticleCommit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9e97f55d-3474-406e-864a-59cfe5c6361c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d651e83-cca1-4bc1-8b0f-e7f95b3ab33b" name="分词结果" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="16b3bffc-d062-481e-aadb-86cac6aabc25" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="adf0f796-7006-4cea-a09b-611d5ad35f89" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="775b8730-ce60-479d-8f86-12619dd6a189" name="Content" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="365c9416-943d-46b8-ae01-ca985d86309e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="545202f0-d752-464b-838b-3f58d3e2e542" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="838cbe41-e581-4051-8115-bbfaffbacd21" name="Feed" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="445d798f-052c-4343-8e7e-ac12c0d58d9e" />
+        <targetEnds>
+          <association Id="9a9e3262-b188-4051-800f-9f6737e2ad20" isDerived="false" sourceEndRoleName="Feed" targetEndRoleName="FeedItem" isLeaf="false" isAbstract="false">
+            <classMoniker Id="71efde55-aa35-467e-8d46-38481120098c" LastKnownName="FeedItem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fef3e0e2-a089-42d2-b45c-91fcfefdaa0b" name="Feed" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="90f62e95-6d00-4a22-a0a6-6416a8652a76" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8bc2a5bb-90f6-4e88-b650-6455672f5090" name="FeedItem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="0638acb5-2b0b-4776-bfb3-b2fbea889d27" name="Lower" value="*">
+                      <elementDefinition Id="1980f05d-4ddc-4f4b-a580-0bdbb128b540" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ee598f81-67bc-4077-98e6-e9e906179ad7" name="Upper" value="*">
+                      <elementDefinition Id="634701fb-4bae-4b51-8f5c-58bbd4f3880d" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="db482bb9-f822-4d7e-ac04-abb2d82e55fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f19a0294-09e7-453f-9126-29d7b3f1d779" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="71efde55-aa35-467e-8d46-38481120098c" name="FeedItem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="89c6a311-4b23-46b5-8844-1ba188e767c4" />
+        <targetEnds>
+          <association Id="50a0c17a-e21a-45a2-a02f-e9964b59ab41" isDerived="false" sourceEndRoleName="FeedItem" targetEndRoleName="Article" isLeaf="false" isAbstract="false">
+            <classMoniker Id="839a25da-2313-4fd0-88b7-e0cd67ad84d1" LastKnownName="ArticleCommit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6f1c3e3-0da0-48d8-9716-46c0410ec91c" name="FeedItem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2ac3e2d2-c019-4d64-9cad-225f2f4eea67" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8dc4148f-1ff6-44f2-8b0a-5fb2e7a7a456" name="Article" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7c1176ac-b226-4969-a3fc-e5d62dafd209" name="Lower" value="*">
+                      <elementDefinition Id="df1b202f-ede6-46c1-b1ca-eb228f49b3a2" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="6347d584-26a3-43bf-b9d2-68e9eb9aaa1a" name="Upper" value="*">
+                      <elementDefinition Id="9cd54889-ec3d-4c21-96ff-c695d7df8454" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c4abe7dc-78eb-4fb7-a599-286f7f52cfac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f970bb1e-557c-43c5-b121-54ad3dabb3ee" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="545202f0-d752-464b-838b-3f58d3e2e542" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fb1eb698-79f3-4928-9537-75b305723df7" name="Note" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b629b7ab-64de-4204-8cfa-77aa19a2d9de" />
+        <targetEnds>
+          <association Id="1189844f-8af5-4dec-83b6-126869c22df0" isDerived="false" sourceEndRoleName="Note" targetEndRoleName="Article" isLeaf="false" isAbstract="false">
+            <classMoniker Id="839a25da-2313-4fd0-88b7-e0cd67ad84d1" LastKnownName="ArticleCommit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d2611704-d438-438e-b9aa-229e7f30c84c" name="Note" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d83ef1d0-ce53-421c-9d5b-0485b41c5557" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="272d7c39-0375-4d4b-8a34-013c50edd3fd" name="Article" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="f70c2efd-6e28-49a0-a878-a04178cfaeea" name="Lower" value="*">
+                      <elementDefinition Id="ef3ff374-4b72-48e4-a436-32e1bded61b8" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="05209391-2ed5-4df3-8970-f9c843c87e7b" name="Upper" value="*">
+                      <elementDefinition Id="c7352743-7ba8-4c54-8afd-886770346650" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d98fd265-0d26-4b63-95b3-40492edf539f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="424b91ce-e083-4ec2-a3b4-9e4efc82e6b3" />
+          </association>
+          <association Id="f88dd5cd-4c88-481a-a643-3285cb92a72b" isDerived="false" sourceEndRoleName="Forks" targetEndRoleName="Fork from" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fb1eb698-79f3-4928-9537-75b305723df7" LastKnownName="Note" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="12a4a89c-dc15-48e2-97e6-70ec9f2116b4" name="Forks" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="10724df3-904a-4f34-a22c-fc54e0d62b0e" name="Lower" value="*">
+                      <elementDefinition Id="13405493-14c4-47d5-8245-1071b1f4306d" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="921624a7-d16a-408c-bd9b-c0704c2b482e" name="Upper" value="*">
+                      <elementDefinition Id="5d688cda-3cc6-4e83-a294-59129aae3f20" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a7840de6-e85c-43f1-a57c-40852f93dc94" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ab785731-a761-4748-abae-1f1943b8d09b" name="Fork from" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="42d0bd74-80a6-4e11-83b8-8fa8e0516c46" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="419ea3ae-2d72-4983-acc6-6c6fc686fcc8" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6246e3b6-a8b4-4517-8831-9b6772252bbc" name="MicroBlog" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4218fbbb-54a3-4fde-a6c2-e559e0f3e0fb" />
+        <targetEnds>
+          <association Id="22c2f3fe-b907-4050-9d68-4f11eaf30783" isDerived="false" sourceEndRoleName="MicroBlog" targetEndRoleName="Article" isLeaf="false" isAbstract="false">
+            <classMoniker Id="839a25da-2313-4fd0-88b7-e0cd67ad84d1" LastKnownName="ArticleCommit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6e5eb19-d996-41ea-a1ef-9908ec7d5f9a" name="MicroBlog" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="27d25714-de1d-472d-bbee-2b0d1c4e744f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ff16739-daa1-480b-b120-d3b22b4fcdc4" name="Article" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6ad1b2db-ed31-4173-b73f-8591a1cc7dbb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="236e32f8-03ee-44cc-ac37-19c76851a119" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0495f798-3a17-4dfc-8706-29e0cb385598" name="WordVector" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b249349a-0048-418f-88eb-27650ee17400" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0399c88-0bfd-4041-b56a-944383e42515" name="文章相似集合" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5fffba67-778b-4f01-9da3-56f3752ba306" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6fd18d8f-c084-4c8c-afd6-67480af0af3e" name="分词结果" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ed9659c0-7db0-4c84-915b-13d300115d7b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="1dbf6a6f-6edd-4f74-b2f5-6acf6ec4d049" name="ModelingProject1">
+    <elementDefinition Id="f95525a1-6861-4b66-b1a2-bc99d21434be" />
+  </package>
+</logicalClassDesignerModel>

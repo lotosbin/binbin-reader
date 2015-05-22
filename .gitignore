@@ -1,6 +1,8 @@
-client/node_modules
-server/node_modules
-node_modules/
-server/.vagrant
-server/.idea/
-server/npm-debug.log
+[Bb]in
+[Oo]bj
+node_modules
+.vagrant
+.idea
+packages
+*.suo
+*.user
