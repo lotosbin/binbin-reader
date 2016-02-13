@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.ServiceModel.Syndication;
-using System.Web;
 using System.Xml;
 using MongoRepository;
 
-namespace WebApplication1.Services {
+namespace WebApplication1.Services
+{
     public class ArticleService {
 
         public void UpdateAll() {

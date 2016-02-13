@@ -5,7 +5,8 @@ using System.Xml;
 using System.Xml.Linq;
 using MongoRepository;
 
-namespace WebApplication1.Services {
+namespace WebApplication1.Services
+{
     public class FeedService {
         public void LoadOpml() {
             var uri = "http://anve-server01/opml.xml";

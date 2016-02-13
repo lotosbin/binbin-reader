@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel.Syndication;
-using System.Xml;
 using MongoRepository;
 using Nancy;
 using Nancy.ModelBinding;
 using WebApplication1.Services;
 
-namespace WebApplication1 {
+namespace WebApplication1
+{
     public class FeedModule : NancyModule {
         public ArticleService articleService { get; set; }
         private FeedService feedService { get; set; }

@@ -1,0 +1,6 @@
+{
+ "projects":["ClassLibrary1","WebApplication1"],
+ "sdk":{
+
+ }   
+}

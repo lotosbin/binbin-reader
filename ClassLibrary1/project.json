@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0.0",
+  "frameworks": {
+    "dnx451": {}
+  },
+  "dependencies": {
+    "Newtonsoft.Json": "8.0.2",
+    "RestSharp": "105.2.3"
+  }
+}
