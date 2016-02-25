@@ -10,12 +10,19 @@ namespace WebApplication1
     public class FeedModule : NancyModule {
         public ArticleService articleService { get; set; }
         private FeedService feedService { get; set; }
-        public FeedModule()
+        private readonly Repository<Feed> _feedRepository;
+        private readonly Repository<Article> _articleRository;
+        public FeedModule(ArticleService articleService,
+        Repository<Feed> feedRepository,
+        Repository<Article> articalRepository,
+        FeedService feedService)
             : base("feeds") {
-            articleService = new ArticleService();
-            feedService = new FeedService();
+            this.articleService = articleService;
+            this._feedRepository = feedRepository;
+            this._articleRository = articalRepository;
+            this.feedService = feedService;
             Get["/"] = p => {
-                var list = new MongoRepository<Feed>().ToList();
+                var list = this._feedRepository.ToList();
                 return list;
             };
             Post["/"] = p => {
@@ -29,23 +36,21 @@ namespace WebApplication1
                 var f = new Feed() {
                     Url = "http://mapei.blog.51cto.com/rss.php?uid=356827"
                 };
-                var feeds = new MongoRepository<Feed>();
-                feeds.Add(f);
+                this._feedRepository.Add(f);
                 return "";
             };
             Get["{id}/detail"] = p => {
-                var feed = new MongoRepository<Feed>().GetById(p.id);
+                var feed = this._feedRepository.GetById(p.id);
                 List<Article> list = new List<Article>();
                 if (feed != null) {
-                    var articals = new MongoRepository<Article>();
                     string id = feed.Id.ToString();
-                    list = articals.Where(a => a.SourceId == id).ToList();
+                    list = this._articleRository.Where(a => a.SourceId == id).ToList();
                     return list;
                 }
                 return list;
             };
             Post["{id}/detail"] = p => {
-                var feed = new MongoRepository<Feed>().GetById(p.id);
+                var feed = this._feedRepository.GetById(p.id);
                 if (feed != null)
                     articleService.UpdateArticle(feed);
                 return "";

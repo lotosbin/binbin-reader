@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Owin;
 using Nancy.Owin;
-
 namespace WebApplication1
 {
     public class Startup {
@@ -25,6 +25,18 @@ namespace WebApplication1
             });
            
         }
-        public static void Main(string[] args) => Microsoft.AspNet.Hosting.WebApplication.Run<Startup>(args);
+        public static void Main(string[] args)
+        {
+           var configuration = WebApplicationConfiguration.GetDefault(args);
+
+            var application = new WebApplicationBuilder()
+                        // .UseWebRoot()
+                        // .UseApplicationBasePath(Directory.GetCurrentDirectory())
+                        .UseConfiguration(configuration)
+                        .UseStartup<Startup>()
+                        .Build();
+
+            application.Run();
+        }
     }
 }

@@ -8,9 +8,17 @@ using MongoRepository;
 namespace WebApplication1.Services
 {
     public class ArticleService {
+        private readonly Repository<Feed> _feedRepository;
+        private readonly Repository<Article> _articleRepository;
+        public ArticleService(Repository<Feed> feedRepository,
+        Repository<Article> articleRepository
+        ){
+            this._feedRepository = feedRepository;
+            this._articleRepository = articleRepository;
+        }
 
         public void UpdateAll() {
-            var feeds = new MongoRepository<Feed>();
+            var feeds = this._feedRepository.ToList();
             foreach (var feed in feeds) {
                 try {
                     UpdateArticle(feed);
@@ -43,7 +51,7 @@ namespace WebApplication1.Services
 
         public void UpdateArticle(Feed f) {
             var feed = GetFeedItems(f.Url);
-            var articles = new MongoRepository<Article>();
+            var articles = this._articleRepository.ToList();
             foreach (var item in feed.Items) {
                 var artical = articles.SingleOrDefault(a => a.ThirdId == item.Id);
                 if (artical != null && artical.LastUpdatedTime >= item.LastUpdatedTime.DateTime) continue;

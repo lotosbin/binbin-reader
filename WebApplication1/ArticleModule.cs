@@ -4,10 +4,12 @@ using Nancy;
 
 namespace WebApplication1 {
     public class ArticleModule : NancyModule {
-        public ArticleModule()
+        private readonly Repository<Article> _articleRepository;
+        public ArticleModule(Repository<Article> articleRepository)
             : base("articles") {
+                this._articleRepository = articleRepository;
             Get["/"] = p => {
-                return new MongoRepository<Article>().Take(100).ToList();
+                return this._articleRepository.Take(100).ToList();
             };
             Post["/"] = p => {
                 return "";

@@ -5,11 +5,13 @@ using Nancy.ModelBinding;
 
 namespace WebApplication1 {
     public class AccountModule : NancyModule {
-        public AccountModule()
+        private readonly Repository<Account> _accountRepository;
+        public AccountModule(Repository<Account> accountRepository)
             : base("accounts") {
+                this._accountRepository = accountRepository;
             Get["/{username}"] = p => {
                 string username = p.username;
-                var account = new MongoRepository<Account>().SingleOrDefault(a => a.Username == username);
+                var account = this._accountRepository.SingleOrDefault(a => a.Username == username);
                 if (account == null) {
                     return HttpStatusCode.NotFound;
                 }
@@ -17,11 +19,11 @@ namespace WebApplication1 {
             };
             Post["/"] = p => {
                 var f = this.Bind<Account>();
-                var exists = new MongoRepository<Account>().Exists(a => a.Username == f.Username);
+                var exists = this._accountRepository.Exists(a => a.Username == f.Username);
                 if (exists) {
                     return HttpStatusCode.Conflict;
                 }
-                var account = new MongoRepository<Account>().Add(f);
+                var account = this._accountRepository.Add(f);
                 return account;
             };
         }

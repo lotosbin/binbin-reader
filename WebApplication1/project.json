@@ -1,5 +1,8 @@
 {
   "version": "1.0.0.0",
+  "compilationOptions": {
+        "emitEntryPoint": true
+    }, 
   "frameworks": {
     "dnx451": {
       "frameworkAssemblies": {
@@ -12,13 +15,13 @@
   "dependencies": {
     "Nancy.Owin": "1.4.1",
     "MongoRepository": "1.6.10",
-    "Microsoft.Owin.Host.SystemWeb": "3.0.1",
     "System.Xml.XDocument": "4.0.11-beta-23516",
     "System.Xml.ReaderWriter": "4.0.11-beta-23516",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Owin": "1.0.0-rc1-final"
+    "Microsoft.AspNet.Owin": "1.0.0-rc2-16106",
+    "Nancy.Bootstrappers.Ninject": "1.4.1",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc2-16236"
   },
   "commands": {
-    "web": "Microsoft.AspNet.Server.Kestrel"
+    "web": "WebApplication1"
   }
 }
