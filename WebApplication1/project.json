@@ -1,8 +1,8 @@
 {
   "version": "1.0.0.0",
   "compilationOptions": {
-        "emitEntryPoint": true
-    }, 
+    "emitEntryPoint": true
+  },
   "frameworks": {
     "dnx451": {
       "frameworkAssemblies": {
