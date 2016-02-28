@@ -1,8 +1,10 @@
-﻿using System.Linq;
-using MongoRepository;
+﻿using System;
+using System.Linq;
 using Nancy;
+using Nancy.ModelBinding;
 
-namespace WebApplication1 {
+namespace WebApplication1
+{
     public class ArticleModule : NancyModule {
         private readonly Repository<Article> _articleRepository;
         public ArticleModule(Repository<Article> articleRepository)
@@ -12,7 +14,10 @@ namespace WebApplication1 {
                 return this._articleRepository.Take(100).ToList();
             };
             Post["/"] = p => {
-                return "";
+                var data = this.Bind<Article>();
+                var article = new Article("",data.ThirdId,data.Title,DateTime.Now);
+                _articleRepository.Add(article);
+                return article;
             };
         }
     }

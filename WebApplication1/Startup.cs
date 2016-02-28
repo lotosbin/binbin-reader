@@ -3,6 +3,7 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Owin;
 using Nancy.Owin;
+using Microsoft.Extensions.Logging;
 namespace WebApplication1
 {
     public class Startup {
@@ -16,7 +17,8 @@ namespace WebApplication1
         {
         }
 
-        public void Configure(IApplicationBuilder app){
+        public void Configure(IApplicationBuilder app,ILoggerFactory loggerFactory){
+            // loggerFactory.AddConsole(LogLevel.Information);
             // app.UseNancy();
              app.UseOwin(pipeline =>
             {
