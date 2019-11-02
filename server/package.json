@@ -13,7 +13,7 @@
     "feed-read": "0.0.1",
     "jade": "~1.9.2",
     "mongodb": "^2.0.28",
-    "morgan": "~1.5.1",
+    "morgan": "~1.9.1",
     "opmlparser": "^0.7.0",
     "request": "^2.55.0",
     "serve-favicon": "~2.2.0"
