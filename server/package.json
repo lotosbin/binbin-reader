@@ -12,7 +12,7 @@
     "express": "~4.12.2",
     "feed-read": "0.0.1",
     "jade": "~1.9.2",
-    "mongodb": "^2.0.28",
+    "mongodb": "^3.6.1",
     "morgan": "~1.5.1",
     "opmlparser": "^0.7.0",
     "request": "^2.55.0",
